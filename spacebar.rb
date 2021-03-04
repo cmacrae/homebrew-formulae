@@ -12,7 +12,6 @@ class Spacebar < Formula
     (var/"log/spacebar").mkpath
     man.mkpath
 
-    ENV.O2
     system "make", "install"
 
     bin.install "#{buildpath}/bin/spacebar"
