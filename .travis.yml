@@ -1,5 +1,0 @@
-os: osx
-osx_image: xcode12
-script:
-  - brew install cmacrae/formulae/spacebar
-  - spacebar --version
