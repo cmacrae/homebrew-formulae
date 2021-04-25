@@ -2,9 +2,9 @@ class Spacebar < Formula
   desc "A minimal status bar for macOS."
   homepage "https://github.com/cmacrae/spacebar"
   license "MIT"
-  version "1.2.1"
-  url "https://github.com/cmacrae/spacebar/archive/v#{version}.tar.gz"
-  sha256 "2ea4ae4727b6a3a13c590a20254c1fed52dbd8f381f6d733716281497e348beb"
+  version "1.3.0"
+  url "https://github.com/cmacrae/spacebar/releases/download/v#{version}/spacebar-v#{version}.tar.gz"
+  sha256 "c9924d0df60110bf15b772aa2cd15f09c1d887a645b720a178ce24f938d0bdad"
   head "https://github.com/cmacrae/spacebar.git"
 
   depends_on :macos => :high_sierra
@@ -13,7 +13,9 @@ class Spacebar < Formula
     (var/"log/spacebar").mkpath
     man.mkpath
 
-    system "make", "install"
+    if build.head?
+      system "make", "install"
+    end
 
     bin.install "#{buildpath}/bin/spacebar"
     (pkgshare/"examples").install "#{buildpath}/examples/spacebarrc"
