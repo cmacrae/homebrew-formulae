@@ -9,9 +9,7 @@ on:
 
 jobs:
   build-and-test:
-    # TODO: Move to macos-11.0 when it's out of private preview
-    #       https://github.com/actions/virtual-environments/issues/2486
-    runs-on: macos-10.15
+    runs-on: macos-11
     steps:
       - name: Checkout
         uses: actions/checkout@v2
