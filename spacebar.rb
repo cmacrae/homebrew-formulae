@@ -7,6 +7,8 @@ class Spacebar < Formula
   sha256 "03749d681a9e9d087630eb9ed1cb08500ec038039a40f624e5ae4e242e68ccf2"
   head "https://github.com/cmacrae/spacebar.git"
 
+  deprecate! date: "2026-11-24", because: "is no longer maintained; its successor is kantan: brew install cmacrae/tap/kantan"
+
   depends_on :macos => :high_sierra
 
   def install
